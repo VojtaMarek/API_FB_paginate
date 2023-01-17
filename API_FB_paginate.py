@@ -47,7 +47,7 @@ def create_new_csv(filename):
     """Returns False when file already exists"""
     try:
         with open(filename, "x", newline=""): return True
-    except:
+    except FileExistsError:
         return False    
 
 
